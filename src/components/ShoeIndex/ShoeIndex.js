@@ -48,7 +48,7 @@ const Wrapper = styled.div`
 `;
 
 const LeftColumn = styled.div`
-  padding-inline: 32px;
+  padding-inline-end: 32px;
   margin-block-start: 0.875rem;
 `;
 

@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   font-size: 0.875rem;
   color: ${COLORS.gray[300]};
   background-color: ${COLORS.gray[900]};
-  height: 40px;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   padding-inline: 32px;
