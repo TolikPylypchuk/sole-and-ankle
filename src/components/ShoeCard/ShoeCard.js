@@ -36,6 +36,9 @@ const ShoeCard = ({
       <Wrapper>
         <ImageWrapper>
           <Image alt="" src={imageSrc} />
+          <Tag show={variant !== 'default'} sale={variant === 'on-sale'}>
+            {variant === 'on-sale' ? 'Sale' : 'New release!'}
+          </Tag>
         </ImageWrapper>
         <Spacer size={12} />
         <Row>
@@ -69,6 +72,17 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   width: 100%;
   border-radius: 16px 16px 4px 4px;
+`;
+
+const Tag = styled.div`
+  display: ${p => p.show ? 'initial' : 'none'};
+  position: absolute;
+  top: 12px;
+  right: -4px;
+  background-color: ${p => p.sale ? COLORS.primary : COLORS.secondary};
+  color: ${COLORS.white};
+  padding: 8px 12px;
+  border-radius: 2px;
 `;
 
 const Row = styled.div`
