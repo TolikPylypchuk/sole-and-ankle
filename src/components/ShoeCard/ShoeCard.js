@@ -37,7 +37,7 @@ const ShoeCard = ({
         <ImageWrapper>
           <Image alt="" src={imageSrc} />
           <Tag show={variant !== 'default'} sale={variant === 'on-sale'}>
-            {variant === 'on-sale' ? 'Sale' : 'New release!'}
+            {variant === 'on-sale' ? 'Sale' : 'Just released!'}
           </Tag>
         </ImageWrapper>
         <Spacer size={12} />
@@ -79,6 +79,8 @@ const Tag = styled.div`
   position: absolute;
   top: 12px;
   right: -4px;
+  font-size: ${14 / 16}rem;
+  font-weight: 700;
   background-color: ${p => p.sale ? COLORS.primary : COLORS.secondary};
   color: ${COLORS.white};
   padding: 8px 12px;
@@ -98,6 +100,7 @@ const Name = styled.h3`
 
 const Price = styled.span`
   text-decoration: ${p => p.sale ? 'line-through' : 'none'};
+  color: ${p => p.sale ? COLORS.gray[700] : 'initial'};
 `;
 
 const ColorInfo = styled.p`
